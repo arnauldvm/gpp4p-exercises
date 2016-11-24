@@ -1,0 +1,26 @@
+5000000 (count); time 16238
+2500000 (count); time 15554
+1500000 (count); time 16801
+
+Flat profile of 48.61 secs (3680 total ticks): main
+
+  Interpreted + native   Method                        
+  0.0%     0  +     1    java.io.FileInputStream.open0
+  0.0%     0  +     1    Total interpreted
+
+     Compiled + native   Method                        
+  0.1%     0  +     3    com.kodewerk.profile.CheckIntegerTestHarness.checkInteger
+  0.1%     0  +     3    Total compiled
+
+         Stub + native   Method                        
+ 61.8%     0  +  2276    java.io.FileInputStream.read0
+ 32.4%     0  +  1191    java.io.FileInputStream.readBytes
+  5.7%     0  +   209    java.lang.Throwable.fillInStackTrace
+ 99.9%     0  +  3676    Total stub
+
+
+Global summary of 48.61 seconds:
+100.0%  3683             Received ticks
+  0.0%     1             Received GC ticks
+  0.5%    19             Compilation
+  0.1%     2             Other VM operations

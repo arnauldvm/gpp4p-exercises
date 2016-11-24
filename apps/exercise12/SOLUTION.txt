@@ -6,3 +6,19 @@ $ ./generate.sh
 $ ./run.sh
 
 -> profile00
+
+1°/ Fixing the test harness
+
+Step 0.1
+--------
+
+profile00 -> Too much reads
+
+The time spent reading the data from file is proportionally too big.
+Datasets are too small, because of overridden size in generate.sh
+=> Multiply size by 10 (add a '0')
+
+$ ./generate.sh
+$ ./run.sh
+
+-> profile01
