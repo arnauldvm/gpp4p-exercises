@@ -5,12 +5,21 @@ import java.io.*;
 
 public class CheckIntegerTestHarness {
     public static void main(String[] args) throws IOException {
-        testDataset("dataset1.dat");
-        testDataset("dataset2.dat");
-        testDataset("dataset3.dat");
+        System.out.println("Reading datasets...");
+        List<String> dataset1 = loadDataset("dataset1.dat");
+        List<String> dataset2 = loadDataset("dataset2.dat");
+        List<String> dataset3 = loadDataset("dataset3.dat");
+        System.out.println("Warming up...");
+        testDataset(dataset1);
+        testDataset(dataset2);
+        testDataset(dataset3);
+        System.out.println("Warm up done.");
+        testDataset(dataset1);
+        testDataset(dataset2);
+        testDataset(dataset3);
     }
 
-    public static void testDataset(String dataset) throws IOException {
+    public static List<String> loadDataset(String dataset) throws IOException {
         DataInputStream rdr = new DataInputStream(new FileInputStream(dataset));
         String s;
         List<String> allData = new ArrayList<>();
@@ -21,6 +30,10 @@ public class CheckIntegerTestHarness {
         } catch (EOFException e) {
         }
         rdr.close();
+        return allData;
+    }
+
+    public static void testDataset(List<String> allData) throws IOException {
         long starttime = System.currentTimeMillis();
         int truecount = 0;
         for (String data: allData) {

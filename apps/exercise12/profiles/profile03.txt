@@ -1,0 +1,40 @@
+Reading datasets...
+Warming up...
+5000000 (count); time 2263
+2500000 (count); time 1294
+1500000 (count); time 2819
+Warm up done.
+5000000 (count); time 539
+2500000 (count); time 491
+1500000 (count); time 2754
+
+Flat profile of 65.36 secs (4035 total ticks): main
+
+  Interpreted + native   Method                        
+  0.1%     3  +     0    java.util.Arrays.copyOf
+  0.0%     0  +     1    java.io.UnixFileSystem.canonicalize0
+  0.0%     1  +     0    java.lang.Integer.toString
+  0.0%     1  +     0    com.kodewerk.profile.CheckIntegerTestHarness.testDataset
+  0.0%     1  +     0    java.lang.CharacterDataLatin1.digit
+  0.2%     6  +     1    Total interpreted
+
+     Compiled + native   Method                        
+  2.1%    82  +     2    com.kodewerk.profile.CheckIntegerTestHarness.testDataset
+  2.1%    81  +     2    com.kodewerk.profile.CheckIntegerTestHarness.checkInteger
+  0.0%     0  +     1    java.lang.Integer.getChars
+  0.0%     1  +     0    java.lang.Integer.toString
+  4.2%   164  +     5    Total compiled
+
+         Stub + native   Method                        
+ 55.9%     0  +  2257    java.io.FileInputStream.read0
+ 29.6%     0  +  1196    java.io.FileInputStream.readBytes
+ 10.0%     0  +   404    java.lang.Throwable.fillInStackTrace
+  0.0%     0  +     2    java.lang.System.arraycopy
+ 95.6%     0  +  3859    Total stub
+
+
+Global summary of 65.36 seconds:
+100.0%  4800             Received ticks
+ 15.9%   762             Received GC ticks
+  0.6%    28             Compilation
+  0.1%     3             Other VM operations

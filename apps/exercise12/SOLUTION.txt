@@ -34,3 +34,12 @@ This is because of testDataset method reading data one at a time, and during the
 -> profile02
    . we now have much more details
    . the measured time now excludes I/O
+
+Step 0.3
+--------
+
+At the beginning, all code is not yet compiled => time measured is not representative of the best performance
+=> Add a warmup step
++ Also avoid loading data twice
+
+-> profile03
