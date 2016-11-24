@@ -8,7 +8,6 @@ mkdir -p target/profiles
 prof_file=target/profiles/profile-$ts.txt
 
 prof_opt="-Xprof"
-(set -x; java $prof_opt -classpath target/classes com.kodewerk.profile.CheckIntegerTestHarness > $prof_file)
+(set -x; java $prof_opt -classpath target/classes com.kodewerk.profile.CheckIntegerTestHarness | tee $prof_file)
 
 echo $prof_file
-cat $prof_file
