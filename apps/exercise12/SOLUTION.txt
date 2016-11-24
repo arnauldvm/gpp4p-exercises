@@ -22,3 +22,15 @@ $ ./generate.sh
 $ ./run.sh
 
 -> profile01
+
+Step 0.2
+--------
+
+profile01 -> Still too much reads, we don't see well what's happening in the testDataset method
+
+This is because of testDataset method reading data one at a time, and during the profiling.
+=> Read it at once before the test loop
+
+-> profile02
+   . we now have much more details
+   . the measured time now excludes I/O

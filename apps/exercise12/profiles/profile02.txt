@@ -1,0 +1,35 @@
+5000000 (count); time 665
+2500000 (count); time 615
+1500000 (count); time 4997
+
+Flat profile of 58.11 secs (3726 total ticks): main
+
+  Interpreted + native   Method                        
+  0.1%     2  +     0    java.util.Arrays.copyOf
+  0.0%     0  +     1    java.lang.Throwable.fillInStackTrace
+  0.1%     2  +     1    Total interpreted
+
+     Compiled + native   Method                        
+  1.9%    69  +     1    com.kodewerk.profile.CheckIntegerTestHarness.testDataset
+  0.6%    22  +     0    ExceptionBlob
+  0.2%     4  +     2    com.kodewerk.profile.CheckIntegerTestHarness.checkInteger
+  0.1%     2  +     0    java.lang.Integer.toString
+  2.7%    97  +     3    Total compiled
+
+         Stub + native   Method                        
+ 58.3%     0  +  2173    java.io.FileInputStream.read0
+ 33.4%     0  +  1243    java.io.FileInputStream.readBytes
+  5.4%     0  +   202    java.lang.Throwable.fillInStackTrace
+  0.1%     0  +     4    java.lang.System.arraycopy
+ 97.2%     0  +  3622    Total stub
+
+  Thread-local ticks:
+  0.0%     1             Class loader
+
+
+Global summary of 58.11 seconds:
+100.0%  4279             Received ticks
+ 12.9%   552             Received GC ticks
+  0.7%    28             Compilation
+  0.0%     1             Other VM operations
+  0.0%     1             Class loader

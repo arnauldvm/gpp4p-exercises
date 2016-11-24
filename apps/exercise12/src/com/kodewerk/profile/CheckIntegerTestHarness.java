@@ -12,17 +12,21 @@ public class CheckIntegerTestHarness {
 
     public static void testDataset(String dataset) throws IOException {
         DataInputStream rdr = new DataInputStream(new FileInputStream(dataset));
-        long starttime = System.currentTimeMillis();
-        int truecount = 0;
         String s;
+        List<String> allData = new ArrayList<>();
         try {
             while ((s = rdr.readUTF()) != null) {
-                if (checkInteger(s))
-                    truecount++;
+                allData.add(s);
             }
         } catch (EOFException e) {
         }
         rdr.close();
+        long starttime = System.currentTimeMillis();
+        int truecount = 0;
+        for (String data: allData) {
+            if (checkInteger(data))
+                truecount++;
+        }
         System.out.println(truecount + " (count); time " + (System.currentTimeMillis() - starttime));
     }
 
