@@ -36,6 +36,7 @@ public class CheckIntegerTestHarness {
     public static void testDataset(List<String> allData) throws IOException {
         long starttime = System.currentTimeMillis();
         int truecount = 0;
+        for (int i=10; i-->0;)
         for (String data: allData) {
             if (checkInteger(data))
                 truecount++;

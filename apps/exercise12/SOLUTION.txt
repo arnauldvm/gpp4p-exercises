@@ -43,3 +43,12 @@ At the beginning, all code is not yet compiled => time measured is not represent
 + Also avoid loading data twice
 
 -> profile03
+
+Step 0.4
+--------
+
+profile03 -> FileInputStream methods are still showing up first, preventing from distinguishing the details of other methods
+
+=> Loop 10x around each dataset
+
+-> profile04 -> FileInputStream methods less visible
