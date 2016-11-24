@@ -1,0 +1,8 @@
+Step 0
+------
+
+$ ./compile.sh
+$ ./generate.sh
+$ ./run.sh
+
+-> profile00
