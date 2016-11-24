@@ -45,6 +45,9 @@ public class CheckIntegerTestHarness {
     }
 
     public static boolean checkInteger(String testInteger) {
+        for (char ch: testInteger.toCharArray()) {
+          if ((ch<'0')||(ch>'9')) return false;
+        }
         try {
             Integer theInteger = new Integer(testInteger);//fails if not  a number
             return
@@ -54,7 +57,7 @@ public class CheckIntegerTestHarness {
                     (theInteger.intValue() <= 100000)) && //2>=X<=100000
                     (theInteger.toString().charAt(0) == '3'); //first digit is 3
         } catch (NumberFormatException err) {
-            return false;
+            throw new RuntimeException("Unexpected error", err);
         }
     }
 

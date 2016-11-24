@@ -52,3 +52,18 @@ profile03 -> FileInputStream methods are still showing up first, preventing from
 => Loop 10x around each dataset
 
 -> profile04 -> FileInputStream methods less visible
+
+2°/ Improving code
+
+Baseline performance is given in results #04
+
+Step 1.1
+--------
+
+profile04 -> Most time is spent in Throwable.fillInStackTrace!
+
+Creating an exception is a time consuming taks, because of fillInStackTrace.
+-> Throwing/Catching an exception should never replace normal mechanism of returning a value
+=> Fix the code at line with comment "//fails if not  a number", by
+
+-> profile11 -> Huge perf improvement for dataset3 (the one with 1/3 of non-numbers)
