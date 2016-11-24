@@ -1,0 +1,9 @@
+Reading datasets...
+Warming up...
+50000000 (count); time 4338
+25000000 (count); time 1817
+15000000 (count); time 1422
+Warm up done.
+50000000 (count); time 1898
+25000000 (count); time 1765
+15000000 (count); time 1367

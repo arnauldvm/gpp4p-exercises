@@ -51,11 +51,11 @@ public class CheckIntegerTestHarness {
         try {
             Integer theInteger = new Integer(testInteger);//fails if not  a number
             return
-                    (theInteger.toString() != "") && //not empty
+                    (testInteger != "") && //not empty
                     (theInteger.intValue() > 10) && //greater than ten
                     ((theInteger.intValue() >= 2) &&
                     (theInteger.intValue() <= 100000)) && //2>=X<=100000
-                    (theInteger.toString().charAt(0) == '3'); //first digit is 3
+                    (testInteger.charAt(0) == '3'); //first digit is 3
         } catch (NumberFormatException err) {
             throw new RuntimeException("Unexpected error", err);
         }
