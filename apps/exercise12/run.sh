@@ -42,7 +42,10 @@ if [ "$1" = "h" ]; then
 	#prof_opt="-agentlib:hprof=cpu=times,file=$prof_file" # Very slow!
 fi
 
-(set -x; java $prof_opt -classpath target/classes com.kodewerk.profile.CheckIntegerTestHarness | tee $out_file)
+mode_opt="-client" # force poor optimization for the sake of the exercise
+heap_opt="-Xmx1g" # make sure there is enough heap event though -client mode is activated
+
+(set -x; java $mode_opt $heap_opt $prof_opt -classpath target/classes com.kodewerk.profile.CheckIntegerTestHarness | tee $out_file)
 
 if [ "$1" = "h" ]; then
 	tail -40 $prof_file
