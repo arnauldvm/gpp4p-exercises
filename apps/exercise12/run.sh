@@ -38,6 +38,7 @@ if [ "$1" = "h" ]; then
 	out_file=target/profiles/out-$ts.txt
 
 	prof_opt="-agentlib:hprof=cpu=samples,file=$prof_file"
+	#prof_opt="-agentlib:hprof=cpu=samples,depth=20,interval=1,file=$prof_file" 3 deeper
 	#prof_opt="-agentlib:hprof=cpu=times,file=$prof_file" # Very slow!
 fi
 
