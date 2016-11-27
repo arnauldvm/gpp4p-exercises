@@ -4,7 +4,7 @@ pushd ..
 popd
 
 function usage() {
-	echo "Usage: $0 [ r | c | x | h ]"
+	echo "Usage: $0 [ r | c | X | h ]"
 	echo "  r: run alone"
 	echo "  c: print compilation"
 	echo "  X: Xprof profiler"
