@@ -3,7 +3,7 @@
 )
 @SET "PATH=%ORG_PATH%"
 @CALL ..\setenv.bat
-@SET "PATH=%~DP0\..\..\utils;%PATH%"
+@SET "PATH=%~DP0\..\utils;%PATH%"
 @SET "THISPROG=%~0"
 
 @IF "%1"=="" (
