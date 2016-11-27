@@ -20,6 +20,7 @@
 @SET "out_file=%prof_file%"
 
 @IF "%1"=="r" (
+	@SET "prof_opt="
 	GOTO ARGS_OK
 )
 
